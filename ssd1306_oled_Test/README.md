@@ -5,7 +5,7 @@
 This is a Mongoose OS app, used to test a SSD1306 128*64 OLED Display using I2C (without RESET PIN).
 
 ### Device Tested:
-![128x64 OLED Display SSD1306](images/OLED.jpg) 
+![128x64 OLED Display SSD1306](images/oled2.jpg) 
 - **Marca**:	AZDelivery
 - **Modelo**:	AZOLED12864-3
 
