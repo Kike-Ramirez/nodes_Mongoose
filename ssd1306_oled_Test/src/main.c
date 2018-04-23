@@ -6,7 +6,6 @@
  */
 
 #include <Arduino.h>
-#include <Adafruit_SSD1306.h>
 
 #include "common/cs_dbg.h"
 #include "mgos_app.h"
