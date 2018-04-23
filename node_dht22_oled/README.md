@@ -2,14 +2,22 @@
 
 ## Overview
 
-This is a Mongoose OS app, used to test a SSD1306 128*64 OLED Display using I2C (without RESET PIN).
+This is a Mongoose OS app, used to measure temperature using a DHT22 sensor and display it in a SSD1306 128*64 OLED.
 
-### Device Tested:
+### Devices Used:
+
 ![128x64 OLED Display SSD1306](../images/oled2.jpg) 
 - **Marca**:	AZDelivery
 - **Modelo**:	AZOLED12864-3
 
-[Device tested](https://www.amazon.es/gp/product/B074N9VLZX/ref=oh_aui_detailpage_o02_s00?ie=UTF8&psc=1)
+[OLED Display](https://www.amazon.es/gp/product/B074N9VLZX/ref=oh_aui_detailpage_o02_s00?ie=UTF8&psc=1)
+
+![DHT22](../images/DHT22.jpg) 
+- **Marca**:	-
+- **Modelo**:	DHT22
+
+[DHT22](https://www.adafruit.com/product/385)
+
  
 
 ## How to install this app
@@ -40,7 +48,7 @@ This is a Mongoose OS app, used to test a SSD1306 128*64 OLED Display using I2C 
 
 ## Author
 
-Kike Ramírez
+Kike Ramirez
 https://www.kikeramirez.net
 23/4/2018
 
