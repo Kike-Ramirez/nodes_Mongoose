@@ -1,5 +1,5 @@
-author: mongoose-os
-description: A Mongoose OS app skeleton
+author: Kike Ramírez
+description: A Mongoose OS app to test OLED Display 128x64 SSD1306
 version: 1.0
 
 libs_version: ${mos.version}
@@ -9,6 +9,12 @@ mongoose_os_version: ${mos.version}
 # Optional. List of tags for online search.
 tags:
   - c
+  - NodeMCU
+  - ESP12E
+  - SSD1306
+  - OLED
+  - Display
+  - MongooseOS
 
 # List of files / directories with C sources. No slashes at the end of dir names.
 sources:
@@ -27,6 +33,9 @@ filesystem:
 #  - ["my_app.bool_value", "b", false, {title: "Some boolean value"}]
 #  - ["my_app.string_value", "s", "", {title: "Some string value"}]
 #  - ["my_app.int_value", "i", 123, {title: "Some integer value"}]
+
+config_schema:
+  - ["i2c.enable", true]
 
 # These settings get compiled into the C structure, and can be accessed
 # from the C code this way:
@@ -48,11 +57,17 @@ filesystem:
 
 # List of libraries used by this app, in order of initialisation
 libs:
+    # common mgos libs
   - origin: https://github.com/mongoose-os-libs/ca-bundle
+  - origin: https://github.com/mongoose-os-libs/i2c
   - origin: https://github.com/mongoose-os-libs/rpc-service-config
   - origin: https://github.com/mongoose-os-libs/rpc-service-fs
   - origin: https://github.com/mongoose-os-libs/rpc-uart
-  - origin: https://github.com/mongoose-os-libs/wifi
+  - origin: https://github.com/mongoose-os-libs/spi
+
+    # libs necessary for the current app
+  - origin: https://github.com/mongoose-os-libs/arduino-adafruit-ssd1306
+  - origin: https://github.com/mongoose-os-libs/arduino-adafruit-gfx
 
 # Used by the mos tool to catch mos binaries incompatible with this file format
 manifest_version: 2017-05-18
