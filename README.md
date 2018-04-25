@@ -13,5 +13,5 @@ MIT License
 
 
 <p align="center">
-  <img src="images/mongooseOs.jpg" width="75%">
+  <img src="images/mongooseOs.jpg" width="50%">
 </p>
