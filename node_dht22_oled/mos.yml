@@ -1,5 +1,5 @@
-author: Kike RamÃ­rez
-description: A Mongoose OS app to test OLED Display 128x64 SSD1306
+author: Kike Ramirez<info@kikeramirez.org>
+description: A IOT Node Sendor (Humidity + Temporature) for Thingsboard platform using a OLED Display 128x64 SSD1306
 version: 1.0
 
 libs_version: ${mos.version}
@@ -15,24 +15,23 @@ tags:
   - OLED
   - Display
   - MongooseOS
+  - DHT22
+  - ThingsBoard.io
 
 # List of files / directories with C sources. No slashes at the end of dir names.
 sources:
-  - src
+  - ./src
 
 # List of dirs. Files from these dirs will be copied to the device filesystem
 filesystem:
-  - fs
+  - ./fs
 
 # Custom configuration entries, settable via "device configuration"
 # Below is a custom firmware configuration example.
 # Uncomment and modify according to your needs:
 
 # config_schema:
-#  - ["my_app", "o", {title: "My app custom settings"}]
-#  - ["my_app.bool_value", "b", false, {title: "Some boolean value"}]
-#  - ["my_app.string_value", "s", "", {title: "Some string value"}]
-#  - ["my_app.int_value", "i", 123, {title: "Some integer value"}]
+ - ["node_dht_oled", "o", {title: "Thingsboard IOT Node measuring temperature, humidity and using a OLED Display"}]
 
 config_schema:
   - ["i2c.enable", true]

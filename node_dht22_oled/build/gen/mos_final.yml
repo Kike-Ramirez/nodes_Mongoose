@@ -1,0 +1,363 @@
+type: app
+version: "1.0"
+platform: esp8266
+platforms:
+- esp32
+- esp8266
+author: Kike RamÃ­rez
+description: A Mongoose OS app to test OLED Display 128x64 SSD1306
+sources:
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/src/main.c
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/build/gen/mgos_deps_init.c
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-compat/src/Print.cpp
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-compat/src/WString.cpp
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-compat/src/mgos_arduino.cpp
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-adafruit-gfx/src/glcdfont.c
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-adafruit-gfx/src/mgos_arduino_adafruit_gfx_c.c
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-adafruit-gfx/src/Adafruit_GFX.cpp
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/spi/src/mgos_spi.c
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/spi/src/mgos_spi_mjs.c
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/spi/src/common_gpio/mgos_spi_gpio.c
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-spi/src/mgos_arduino_spi_c.c
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-spi/src/mgos_arduino_spi.cpp
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/i2c/src/mgos_i2c.c
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/i2c/src/common_gpio/mgos_i2c_gpio.c
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-wire/src/mgos_arduino_wire_c.c
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-wire/src/mgos_arduino_wire.cpp
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-adafruit-ssd1306/src/mgos_arduino_adafruit_ssd1306_c.c
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-adafruit-ssd1306/src/Adafruit_SSD1306.cpp
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-adafruit-ssd1306/src/mgos_arduino_ssd1306.cpp
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/ca-bundle/src/mgos_ca_bundle.c
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/dht/src/mgos_dht.c
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/rpc-common/src/mg_rpc/mg_rpc.c
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/rpc-common/src/mg_rpc/mg_rpc_channel.c
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/rpc-common/src/mg_rpc/mg_rpc_channel_http.c
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/rpc-common/src/mg_rpc/mg_rpc_channel_ws.c
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/rpc-common/src/mgos_rpc.c
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/rpc-service-config/src/mgos_service_config.c
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/rpc-service-fs/src/mgos_service_filesystem.c
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/rpc-uart/src/mgos_rpc_channel_uart.c
+includes:
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/mongoose/include
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-compat/include
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-adafruit-gfx/include
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/spi/include
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-spi/include
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/i2c/include
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-wire/include
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-adafruit-ssd1306/include
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/dht/include
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/rpc-common/include/mg_rpc
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/rpc-common/include
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/rpc-service-config/include
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/rpc-service-fs/include
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/rpc-uart/include
+filesystem:
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/ca-bundle/fs/ca.pem
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/fs/index.html
+binary_libs:
+- /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/mongoose/lib/esp8266/libmongoose.a
+libs:
+- origin: https://github.com/mongoose-os-libs/mongoose
+  location: https://github.com/mongoose-os-libs/mongoose
+  suffixtpl: ""
+config_schema:
+- - spi
+  - o
+  - title: SPI settings
+- - spi.enable
+  - b
+  - false
+  - title: Enable SPI
+- - spi.debug
+  - b
+  - false
+  - title: Debug SPI bus activity
+- - spi.miso_gpio
+  - i
+  - -1
+  - title: GPIO to use for MISO
+- - spi.mosi_gpio
+  - i
+  - -1
+  - title: GPIO to use for MOSI
+- - spi.sclk_gpio
+  - i
+  - -1
+  - title: GPIO to use for SCLK
+- - spi.cs0_gpio
+  - i
+  - -1
+  - title: GPIO to use for CS0
+- - spi.cs1_gpio
+  - i
+  - -1
+  - title: GPIO to use for CS1
+- - spi.cs2_gpio
+  - i
+  - -1
+  - title: GPIO to use for CS2
+- - spi.miso_gpio
+  - 12
+- - spi.mosi_gpio
+  - 13
+- - spi.sclk_gpio
+  - 14
+- - spi.cs0_gpio
+  - 15
+- - i2c
+  - o
+  - title: I2C settings
+- - i2c.enable
+  - b
+  - false
+  - title: Enable I2C
+- - i2c.freq
+  - i
+  - 100000
+  - title: Clock frequency
+- - i2c.debug
+  - b
+  - false
+  - title: Debug I2C bus activity
+- - i2c.sda_gpio
+  - i
+  - 0
+  - title: GPIO to use for SDA
+- - i2c.scl_gpio
+  - i
+  - 0
+  - title: GPIO to use for SCL
+- - i2c.sda_gpio
+  - 12
+- - i2c.scl_gpio
+  - 14
+- - rpc
+  - o
+  - title: RPC settings
+- - rpc.enable
+  - b
+  - true
+  - title: Enable RPC
+- - rpc.max_frame_size
+  - i
+  - 4096
+  - title: Max Frame Size
+- - rpc.max_queue_length
+  - i
+  - 25
+  - title: Max Queue Length
+- - rpc.default_out_channel_idle_close_timeout
+  - i
+  - 10
+  - title: Default idle close timeout for outbound channels
+- - rpc.acl_file
+  - s
+  - title: File with RPC ACL JSON
+- - rpc.auth_domain
+  - s
+  - title: Realm to use for digest authentication
+- - rpc.auth_file
+  - s
+  - title: File with user credentials in the htdigest format
+- - rpc.ws
+  - o
+  - title: RPC over WebSocket settings
+- - rpc.ws.enable
+  - b
+  - true
+  - title: Enable RPC over WebSocket
+- - rpc.ws.server_address
+  - s
+  - ""
+  - title: Cloud server address
+- - rpc.ws.reconnect_interval_min
+  - i
+  - 1
+  - title: Minimal reconnect interval
+- - rpc.ws.reconnect_interval_max
+  - i
+  - 60
+  - title: Maximal reconnect interval
+- - rpc.ws.ssl_server_name
+  - s
+  - title: TLS Server Name
+- - rpc.ws.ssl_ca_file
+  - s
+  - title: TLS CA file
+- - rpc.ws.ssl_client_cert_file
+  - s
+  - title: TLS client cert file
+- - rpc.uart
+  - o
+  - title: RPC-over-UART settings
+- - rpc.uart.uart_no
+  - i
+  - title: UART number (-1 to disable)
+- - rpc.uart.baud_rate
+  - i
+  - 115200
+  - title: Baud rate
+- - rpc.uart.fc_type
+  - i
+  - 2
+  - title: 'Flow control: 0 - none, 1 - CTS/RTS, 2 - XON/XOFF'
+- - rpc.uart.wait_for_start_frame
+  - b
+  - true
+  - title: Wait for an incoming frame before using the channel
+- - i2c.enable
+  - true
+build_vars:
+  MGOS_ENABLE_I2C_GPIO: "1"
+  MGOS_ENABLE_SPI_GPIO: "1"
+  MGOS_HAVE_ARDUINO_ADAFRUIT_GFX: "1"
+  MGOS_HAVE_ARDUINO_ADAFRUIT_SSD1306: "1"
+  MGOS_HAVE_ARDUINO_COMPAT: "1"
+  MGOS_HAVE_ARDUINO_SPI: "1"
+  MGOS_HAVE_ARDUINO_WIRE: "1"
+  MGOS_HAVE_CA_BUNDLE: "1"
+  MGOS_HAVE_DHT: "1"
+  MGOS_HAVE_I2C: "1"
+  MGOS_HAVE_MONGOOSE: "1"
+  MGOS_HAVE_RPC_COMMON: "1"
+  MGOS_HAVE_RPC_SERVICE_CONFIG: "1"
+  MGOS_HAVE_RPC_SERVICE_FS: "1"
+  MGOS_HAVE_RPC_UART: "1"
+  MGOS_HAVE_SPI: "1"
+cdefs:
+  ARDUINO: "150"
+  ESP8266: "1"
+  F_CPU: "160000000"
+  MG_ENABLE_DNS: "1"
+  MG_ENABLE_DNS_SERVER: "1"
+  MG_ENABLE_MQTT: "1"
+  MG_ENABLE_SNTP: "1"
+  MGOS_ENABLE_RPC_CHANNEL_HTTP: "1"
+  MGOS_ENABLE_RPC_CHANNEL_WS: "1"
+  MGOS_ENABLE_SYS_SERVICE: "1"
+  MGOS_HAVE_ARDUINO_ADAFRUIT_GFX: "1"
+  MGOS_HAVE_ARDUINO_ADAFRUIT_SSD1306: "1"
+  MGOS_HAVE_ARDUINO_COMPAT: "1"
+  MGOS_HAVE_ARDUINO_SPI: "1"
+  MGOS_HAVE_ARDUINO_WIRE: "1"
+  MGOS_HAVE_CA_BUNDLE: "1"
+  MGOS_HAVE_DHT: "1"
+  MGOS_HAVE_I2C: "1"
+  MGOS_HAVE_MONGOOSE: "1"
+  MGOS_HAVE_RPC_COMMON: "1"
+  MGOS_HAVE_RPC_SERVICE_CONFIG: "1"
+  MGOS_HAVE_RPC_SERVICE_FS: "1"
+  MGOS_HAVE_RPC_UART: "1"
+  MGOS_HAVE_SPI: "1"
+tags:
+- c
+- NodeMCU
+- ESP12E
+- SSD1306
+- OLED
+- Display
+- MongooseOS
+libs_version: "2.1"
+modules_version: "2.1"
+mongoose_os_version: "2.1"
+manifest_version: 2017-05-18
+libs_handled:
+- name: mongoose
+  path: /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/mongoose
+- name: arduino-compat
+  path: /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-compat
+  deps:
+  - mongoose
+  sources:
+  - /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-compat/src/Print.cpp
+  - /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-compat/src/WString.cpp
+  - /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-compat/src/mgos_arduino.cpp
+- name: arduino-adafruit-gfx
+  path: /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-adafruit-gfx
+  deps:
+  - arduino-compat
+  sources:
+  - /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-adafruit-gfx/src/glcdfont.c
+  - /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-adafruit-gfx/src/mgos_arduino_adafruit_gfx_c.c
+  - /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-adafruit-gfx/src/Adafruit_GFX.cpp
+- name: spi
+  path: /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/spi
+  deps:
+  - mongoose
+  sources:
+  - /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/spi/src/mgos_spi.c
+  - /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/spi/src/mgos_spi_mjs.c
+  - /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/spi/src/common_gpio/mgos_spi_gpio.c
+- name: arduino-spi
+  path: /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-spi
+  deps:
+  - arduino-compat
+  - spi
+  sources:
+  - /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-spi/src/mgos_arduino_spi_c.c
+  - /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-spi/src/mgos_arduino_spi.cpp
+- name: i2c
+  path: /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/i2c
+  deps:
+  - mongoose
+  sources:
+  - /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/i2c/src/mgos_i2c.c
+  - /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/i2c/src/common_gpio/mgos_i2c_gpio.c
+- name: arduino-wire
+  path: /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-wire
+  deps:
+  - arduino-compat
+  - i2c
+  sources:
+  - /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-wire/src/mgos_arduino_wire_c.c
+  - /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-wire/src/mgos_arduino_wire.cpp
+- name: arduino-adafruit-ssd1306
+  path: /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-adafruit-ssd1306
+  deps:
+  - arduino-adafruit-gfx
+  - arduino-compat
+  - arduino-spi
+  - arduino-wire
+  sources:
+  - /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-adafruit-ssd1306/src/mgos_arduino_adafruit_ssd1306_c.c
+  - /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-adafruit-ssd1306/src/Adafruit_SSD1306.cpp
+  - /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/arduino-adafruit-ssd1306/src/mgos_arduino_ssd1306.cpp
+- name: ca-bundle
+  path: /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/ca-bundle
+  deps:
+  - mongoose
+  sources:
+  - /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/ca-bundle/src/mgos_ca_bundle.c
+- name: dht
+  path: /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/dht
+  sources:
+  - /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/dht/src/mgos_dht.c
+- name: rpc-common
+  path: /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/rpc-common
+  deps:
+  - http-server
+  sources:
+  - /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/rpc-common/src/mg_rpc/mg_rpc.c
+  - /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/rpc-common/src/mg_rpc/mg_rpc_channel.c
+  - /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/rpc-common/src/mg_rpc/mg_rpc_channel_http.c
+  - /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/rpc-common/src/mg_rpc/mg_rpc_channel_ws.c
+  - /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/rpc-common/src/mgos_rpc.c
+- name: rpc-service-config
+  path: /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/rpc-service-config
+  deps:
+  - rpc-common
+  sources:
+  - /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/rpc-service-config/src/mgos_service_config.c
+- name: rpc-service-fs
+  path: /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/rpc-service-fs
+  deps:
+  - rpc-common
+  sources:
+  - /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/rpc-service-fs/src/mgos_service_filesystem.c
+- name: rpc-uart
+  path: /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/rpc-uart
+  deps:
+  - rpc-common
+  sources:
+  - /home/kikeramirez/src/MongooseOS_apps/nodes_Mongoose/node_dht22_oled/deps/rpc-uart/src/mgos_rpc_channel_uart.c
