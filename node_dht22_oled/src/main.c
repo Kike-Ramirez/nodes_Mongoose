@@ -1,5 +1,8 @@
 /*
- * App Title: ssd1306_oled_Test
+ * App Title: node_dht22_oled
+ * Description: Node for IOT Platform Thingsboard implementing
+ * an OLED Screen and a Temperature Sensor DHT22
+ * 
  * Author: Kike Ramirez
  * Date: 24/4/2028
  *
@@ -54,7 +57,7 @@ enum mgos_app_init_result mgos_app_init(void) {
   
   else return MGOS_APP_INIT_ERROR;
 
-  if ((s_dht = mgos_dht_create(15, DHT22)) == NULL) return MGOS_APP_INIT_ERROR;
+  if ((s_dht = mgos_dht_create(4, DHT22)) == NULL) return MGOS_APP_INIT_ERROR;
 
   mgos_set_timer(2000 /* ms */, true /* repeat */, dht_timer_cb, NULL);
   
